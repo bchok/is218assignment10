@@ -11,7 +11,7 @@ class MyFormValidation{
   }
 
   public function sanAndValEmail($email){
-    $_POST['email'] = $email
+    $_POST['email'] = $email;
     if (isset($_POST['email'])){
       $email2 = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
       if (filter_var($email2, FILTER_VALIDATE_EMAIL)){
@@ -21,7 +21,7 @@ class MyFormValidation{
       }
     }
   }
+}
 
 
-
- ?>
+?>
