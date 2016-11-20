@@ -23,5 +23,17 @@ class MyFormValidation{
   }
 }
 
+echo 'Was not sure how to pass the post values through my class functions on submission of the form<br>';
+echo 'Therefore I just passed what the values would be into the functions to prove that the validation at least works<br><br>';
+
+$myVal = new MyFormValidation();
+
+echo 'This sanitizes my string with my name Brian that has html break tags before and after<br>';
+$myVal->sanitizeName("<br> Brian <br>");
+echo '<br> this santizes and validates my email that has break statements surrounding it<br>';
+$myVal->sanAndValEmail("<br> bjc@njit.edu <br>");
+echo '<br> This tries to validate an invalid email address of just random lettters<br>';
+$myVal->sanAndValEmail("lkjdsflkajsd");
+
 
 ?>
